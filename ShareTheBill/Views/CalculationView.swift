@@ -122,13 +122,7 @@ struct CalculationView: View {
             
             Group {
                 
-                HStack {
-                    Text("Bill Amount")
-                        .font(.headline.smallCaps())
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
+                TitleView(title: "Bill Amount")
                 
                 HStack(spacing: 5) {
                     Text("$")
@@ -142,13 +136,7 @@ struct CalculationView: View {
             
             Group {
                 
-                HStack {
-                    Text("Tip Percentage")
-                        .font(.headline.smallCaps())
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
+                TitleView(title: "Tip Percentage")
                 
                 Picker("Tip Percentage",
                        selection: $selectedTipPercentage) { // Now a "live" binding
@@ -170,13 +158,7 @@ struct CalculationView: View {
             
             Group {
                 
-                HStack {
-                    Text("Total with Tip")
-                        .font(.headline.smallCaps())
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
+                TitleView(title: "Total with Tip")
                 
                 HStack(spacing: 5) {
                     Text("$")
@@ -191,13 +173,7 @@ struct CalculationView: View {
             
             Group {
                 
-                HStack {
-                    Text("How many people?")
-                        .font(.headline.smallCaps())
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
+                TitleView(title: "How many people?")
                 
                 // Now a "live" binding connected to "peopleCount"
                 Stepper("\(peopleCount)",
@@ -209,13 +185,7 @@ struct CalculationView: View {
             
             Group {
                 
-                HStack {
-                    Text("Each person Pays...")
-                        .font(.headline.smallCaps())
-                    
-                    Spacer()
-                }
-                .padding(.horizontal)
+                TitleView(title: "Each person Pays...")
                 
                 HStack(spacing: 5) {
                     Text("$")
